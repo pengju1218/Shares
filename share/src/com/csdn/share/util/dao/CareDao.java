@@ -35,6 +35,21 @@ public class CareDao {
     }
 
 
+
+    /**
+     * 添加
+     */
+    public long update(Care song) {
+        SQLiteDatabase db = dbHpler.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(DBData.CARE_CODE, song.getCode());
+        values.put(DBData.CARE_NAME, song.getName());
+        values.put(DBData.CARE_REMARK, song.getRemark());
+        long rs = db.update(DBData.CARE_TABLENAME, values,  "code=?", new String[]{song.getCode()});
+        db.close();
+        return rs;
+    }
+
     public List<Care> getALL() {
 
         List<Care> shares = new ArrayList<>();

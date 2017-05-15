@@ -119,6 +119,35 @@ public class PhoneGapActivity extends DroidGap {
             }
         }
 
+        @JavascriptInterface
+        public void UpdateCare2(final String shareStr) {
+            try {
+
+                JSONObject jsonObject = new JSONObject(shareStr);
+                Care care = new Care();
+                care.setName(jsonObject.optString("name"));
+                care.setCode(jsonObject.optString("code"));
+                care.setRemark(jsonObject.optString("remark"));
+
+
+                    long l = careDao.update(care);
+                    if (l >= 0) {
+                        PhoneGapActivity.this.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                promptDialog.showInfo("更新成功");
+                            }
+                        });
+                    }
+
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+
 
         @JavascriptInterface
         public void UpdateCare(final String shareStr) {
