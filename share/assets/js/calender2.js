@@ -195,7 +195,7 @@ window.calender = (function(win,doc){
 			if( g('.calender-wrap')) doc.body.removeChild( g('.calender-wrap') )
 			var private_Day_title=['一','二','三','四','五','六','日'];
 			//内容
-			var html = '<div class="calender-wrap">';
+			var html = '<div  style="margin-left:0.4rem;"    class="calender-wrap">';
 			html +='<div id="calender-header" class="calender-header none-btn "><a id="calender-prev" href="javascript:;">&lt;</a><a id="calender-next" href="javascript:;">&gt;</a>  <span id="calender-year">2016</span>年<span id="calender-mon">10</span>月</div>'
 			//星期
 			html += '<div class="calender-list"><div class="calender-caption">';
