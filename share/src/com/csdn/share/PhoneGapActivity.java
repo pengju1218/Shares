@@ -19,17 +19,17 @@
 
 package com.csdn.share;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.JsResult;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
-import android.widget.Toast;
 
-import com.csdn.share.util.Share;
-import com.csdn.share.util.ShareDao;
+import com.csdn.share.util.bean.Care;
+import com.csdn.share.util.bean.Share;
+import com.csdn.share.util.dao.CareDao;
+import com.csdn.share.util.dao.ShareDao;
 
 import org.apache.cordova.DroidGap;
 import org.json.JSONObject;
@@ -41,6 +41,7 @@ import me.leefeng.promptlibrary.PromptDialog;
 
 public class PhoneGapActivity extends DroidGap {
     public ShareDao shareDao;
+    public CareDao careDao;
     public List<Share> list;
     public PromptDialog promptDialog;
 
@@ -49,6 +50,7 @@ public class PhoneGapActivity extends DroidGap {
         super.onCreate(savedInstanceState);
 
         shareDao = new ShareDao(PhoneGapActivity.this);
+        careDao=new CareDao(PhoneGapActivity.this);
 
         promptDialog = new PromptDialog(this);
 
@@ -91,6 +93,20 @@ public class PhoneGapActivity extends DroidGap {
         }
 
         @JavascriptInterface
+        public void delete2(String code) {
+            int i = careDao.deleteShare(code);
+            if (i > 0) {
+                PhoneGapActivity.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        promptDialog.showInfo("删除成功");
+                    }
+                });
+            }
+        }
+
+
+        @JavascriptInterface
         public void delete(String code) {
             int i = shareDao.deleteShare(code);
             if (i > 0) {
@@ -103,6 +119,45 @@ public class PhoneGapActivity extends DroidGap {
             }
         }
 
+
+        @JavascriptInterface
+        public void UpdateCare(final String shareStr) {
+            try {
+
+                JSONObject jsonObject = new JSONObject(shareStr);
+                Care care = new Care();
+                care.setName(jsonObject.optString("name"));
+                care.setCode(jsonObject.optString("code"));
+                care.setRemark(jsonObject.optString("remark"));
+
+
+                boolean isExit = careDao.query(jsonObject.optString("code"));
+                if (isExit) {
+                    PhoneGapActivity.this.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            promptDialog.showInfo("关注已经存在");
+                        }
+                    });
+
+                } else {
+                    long l = careDao.add(care);
+                    if (l >= 0) {
+                        PhoneGapActivity.this.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                promptDialog.showInfo("关注添加成功");
+                            }
+                        });
+                    }
+                }
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
 
         @JavascriptInterface
         public void UpdateShare(final String shareStr) {
@@ -161,21 +216,28 @@ public class PhoneGapActivity extends DroidGap {
                         webView.loadUrl("javascript:callJs('" + json + "')");
                     }
                 });
+        }
+        @JavascriptInterface
+        public void push1() {
+         List<Care>   list = careDao.getALL();
 
+            final String json = getJson1(list);
 
-
-
+            webView.post(new Runnable() {
+                @Override
+                public void run() {
+                    webView.loadUrl("javascript:callJs('" + json + "')");
+                }
+            });
         }
 
     }
 
     public String getJson(List<Share> list) {
 
-
         if(list.size()==0){
             return "";
         }
-
 
 
         String json = "[";
@@ -184,6 +246,26 @@ public class PhoneGapActivity extends DroidGap {
                     "\"name\":\"" + share.getName() + "\"," +
                     "\"date\":\"" + share.getDate() + "\"," +
                     "\"shape\":\"" + share.getShape() + "\"," +
+                    "\"remark\":\"" + share.getRemark() + "\"},";
+
+        }
+
+        json= json.substring(0, json.length() - 1);
+        json += "]";
+        return json;
+
+    }
+    public String getJson1(List<Care> list) {
+
+        if(list.size()==0){
+            return "";
+        }
+
+
+        String json = "[";
+        for (Care share : list) {
+            json += "{\"code\":\"" + share.getCode() + "\"," +
+                    "\"name\":\"" + share.getName() + "\"," +
                     "\"remark\":\"" + share.getRemark() + "\"},";
 
         }

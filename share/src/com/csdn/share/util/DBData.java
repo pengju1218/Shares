@@ -17,6 +17,13 @@ public class DBData {
 	public static final String SHARE_REMARK="remark";
 
 
+	//歌曲字段
+	public static final String CARE_TABLENAME="t_care";
+	public static final String CARE_id="_id";
+	public static final String CARE_NAME="name";
+	public static final String CARE_CODE="code";
+	public static final String CARE_REMARK="remark";
+
 
 
 	

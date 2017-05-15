@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>FrozenUI Demo</title>
+    <script type="text/javascript" src="js/stats.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="css/frozen.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/msg.js" ></script>
+    <script src="js/frozen.js"></script>
+</head>
+
+<body ontouchstart onload="window.SM.push1()" style="width:8rem;">
+<header class="ui-header ui-header-positive ui-border-b">
+    <i class="ui-icon-return" onclick="history.back()"></i>
+    <h1>关注的股票</h1>
+</header>
+
+
+<section class="ui-container">
+    <section id="table">
+        <div class="demo-item">
+
+            <div class="demo-block">
+                <table id='mytesttable' class="ui-table ui-border-tb" border="1" width="100%">
+                    <thead>
+                    <tr>
+                        <th width="8%">代码</th>
+                        <th width="11%">名称</th>
+                        <td style="text-align:left;padding-left:0.1rem;">备注</td>
+                        <td width="8%">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                 <!--   <tr>
+                        <td>000001</td>
+                        <td>平安股份</td>
+                        <td>2016/02/06</td>
+                        <td>红三兵</td>
+                        <td style="text-align:left;padding-left:0.1rem;">最底价8.6</td>
+                    </tr>-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+
+</section>
+<script>
+        $('.ui-list li,.ui-tiled li').click(function(){
+            if($(this).data('href')){
+                location.href= $(this).data('href');
+            }
+        });
+        $('.ui-header .ui-btn').click(function(){
+            location.href= 'index.html';
+        });
+
+
+
+ function callJs(str){
+
+if(str==''){
+msg.tips("没有数据");
+
+
+}else{
+                 var jsonobjs = JSON.parse(str);
+
+                    var table = document.getElementById("mytesttable");
+                    for(var y=0; y<jsonobjs.length; y++){
+                        var tr = table.insertRow(table.rows.length);
+                        var td1 = tr.insertCell(0);
+                        var td2 = tr.insertCell(1);
+                        var td3 = tr.insertCell(2);
+                        var td4 = tr.insertCell(3);
+
+td1.align = "center";
+td2.align = "center";
+td4.align = "center";
+td3.align = "left";
+td3.style.cssText = "text-align:left;padding-left:0.1rem;";
+
+
+
+                        td1.innerHTML = jsonobjs[y].code;
+                        td2.innerHTML = jsonobjs[y].name;
+                        td3.innerHTML = jsonobjs[y].remark;
+
+                        td4.innerHTML = "<a href='javascript:window.SM.delete2(\""+ jsonobjs[y].code+ "\")'>删除</a>";
+                    }
+            }
+
+
+}
+
+</script>
+</body>
+</html>

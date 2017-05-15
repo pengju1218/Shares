@@ -23,25 +23,29 @@ public class DBShare extends SQLiteOpenHelper {
 		// 创建歌曲表
 		db.execSQL("CREATE TABLE " + DBData.SHARE_TABLENAME + "("
 				+ DBData.SHARE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-				
-				 + DBData.SHARE_CODE + " NVARCHAR(100),"
-				  + DBData.SHARE_NAME  +" NVARCHAR(100),"
+				+ DBData.SHARE_CODE + " NVARCHAR(100),"
+				+ DBData.SHARE_NAME  +" NVARCHAR(100),"
 				+ DBData.SHARE_DATE + " NVARCHAR(100),"
 				+ DBData.SHARE_SHAPE + " NVARCHAR(100),"
-				
-
 				+ DBData.SHARE_REMARK + " NVARCHAR(500))"
 			);
 
-		
+		// 创建歌曲表
+		db.execSQL("CREATE TABLE " + DBData.CARE_TABLENAME + "("
+				+ DBData.CARE_id + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+				+ DBData.CARE_CODE + " NVARCHAR(100),"
+				+ DBData.CARE_NAME  +" NVARCHAR(100),"
+				+ DBData.CARE_REMARK + " NVARCHAR(500))"
+		);
+
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		// 删除表
+
 		
 		db.execSQL("DROP TABLE IF EXISTS " + DBData.SHARE_TABLENAME);
-		
+		db.execSQL("DROP TABLE IF EXISTS " + DBData.CARE_TABLENAME);
 	}
 
 }
