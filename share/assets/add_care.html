@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/frozen.css">
     <link rel="stylesheet" href="css/demo.css">
 
-    <script type="text/javascript" src="js/msg.js"></script>
+    <script type="text/javascript" src="js/tip.js"></script>
     <script src="js/zepto.min.js"></script>
     <script src="js/frozen.js"></script>
     <style>
@@ -104,34 +104,33 @@
 
 
 
-         $('.button1').click(function(){
-var jsObj = {};
-jsObj.code = document.getElementById("code").value;
-jsObj.name = document.getElementById("name").value;
-jsObj.remark = document.getElementById("remark").value;
-jsObj.id=0;
+    $('.button1').click(function(){
+        var jsObj = {};
+        jsObj.code = document.getElementById("code").value;
+        jsObj.name = document.getElementById("name").value;
+        jsObj.remark = document.getElementById("remark").value;
+        jsObj.id=0;
 
-var str = JSON.stringify(jsObj);
-                    if(jsObj.code.length==0||jsObj.name.length==0||jsObj.remark.length==0){
-msg.tips("表单不能为空");
-
-                    }else{
-                       window.SM.UpdateCare(str);
-                    }
-        });
-
+        var str = JSON.stringify(jsObj);
+       if(jsObj.code.length==0||jsObj.name.length==0||jsObj.remark.length==0){
+          tip.showTip('提示','表单不能为空');
+        }else{
+           window.SM.UpdateCare(str);
+        }
+    });
 
 
-$('.button2').click(function(){
-var jsObj = {};
-jsObj.code = document.getElementById("code").value;
-jsObj.name = document.getElementById("name").value;
-jsObj.remark = document.getElementById("remark").value;
-jsObj.id=0;
-var str = JSON.stringify(jsObj);
-window.SM.UpdateCare2(str);
 
- });
+    $('.button2').click(function(){
+        var jsObj = {};
+        jsObj.code = document.getElementById("code").value;
+        jsObj.name = document.getElementById("name").value;
+        jsObj.remark = document.getElementById("remark").value;
+        jsObj.id=0;
+        var str = JSON.stringify(jsObj);
+        window.SM.UpdateCare2(str);
+
+    });
 
 
 
@@ -145,8 +144,6 @@ function edit(){
 var myurl=GetQueryString("code");
 if(myurl !=null && myurl.toString().length>1)
 {
-   //alert(myurl);
-
 
 var code = document.getElementById("code");
 var name= document.getElementById("name");

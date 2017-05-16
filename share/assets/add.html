@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/frozen.css">
     <link rel="stylesheet" href="css/demo.css">
 
-    <script type="text/javascript" src="js/msg.js" ></script>
+    <script type="text/javascript" src="js/tip.js"></script>
     <script src="js/zepto.min.js"></script>
     <script src="js/frozen.js"></script>
     <style>
@@ -111,45 +111,31 @@
         });
 
 
- $('.aegb').click(function(){
-calender('#dates',true).init({format : 'yyyy/MM/dd'},function(date){
- 	this.value= date
-});
-        });
+    $('.aegb').click(function(){
+      calender('#dates',true).init({format : 'yyyy/MM/dd'},function(date){
+         this.value= date
+     });
+    });
 
 
 
-         $('.ui-btn-primary').click(function(){
-var jsObj = {};
-jsObj.code = document.getElementById("code").value;
-jsObj.name = document.getElementById("name").value;
-jsObj.date = document.getElementById("dates").value;
-jsObj.shape = document.getElementById("shape").value;
-jsObj.remark = document.getElementById("remark").value;
-jsObj.id=0;
+    $('.ui-btn-primary').click(function(){
+        var jsObj = {};
+        jsObj.code = document.getElementById("code").value;
+        jsObj.name = document.getElementById("name").value;
+        jsObj.date = document.getElementById("dates").value;
+        jsObj.shape = document.getElementById("shape").value;
+        jsObj.remark = document.getElementById("remark").value;
+        jsObj.id=0;
+        var str = JSON.stringify(jsObj);
 
-var str = JSON.stringify(jsObj);
+      if(jsObj.code.length==0||jsObj.name.length==0||jsObj.date.length==0||jsObj.code.length==0||jsObj.shape.length==0||jsObj.remark.length==0){
+         tip.showTip('提示','表单不能为空');
+      }else{
+         window.SM.UpdateShare(str);
+      }
 
-
-
-
-
-
-//toastr.options = {"timeOut": "3000","preventDuplicates": true,"preventManyTimes": true,"hideDuration": "1"};
-
-                    if(jsObj.code.length==0||jsObj.name.length==0||jsObj.date.length==0||jsObj.code.length==0||jsObj.shape.length==0||jsObj.remark.length==0){
-
-msg.tips("表单不能为空");
-
-                    }else{
-                       window.SM.UpdateShare(str);
-
-
-                    }
-
-
-
-        });
+    });
 
 
 

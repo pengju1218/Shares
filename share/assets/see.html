@@ -67,42 +67,35 @@
 
  function callJs(str){
 
-if(str==''){
+  if(str==''){
+     tip.showTip('提示','没有数据');
+   }else{
+     var jsonobjs = JSON.parse(str);
+     var table = document.getElementById("mytesttable");
+      for(var y=0; y<jsonobjs.length; y++){
+            var tr = table.insertRow(table.rows.length);
+            var td1 = tr.insertCell(0);
+            var td2 = tr.insertCell(1);
+            var td3 = tr.insertCell(2);
+            var td4 = tr.insertCell(3);
+            var td5 = tr.insertCell(4);
+            var td6 = tr.insertCell(5);
 
-tip.showTip('提示','没有数据');
+            td1.align = "center";
+            td2.align = "center";
+            td3.align = "center";
+            td4.align = "center";
+            td5.align = "left";
+            td5.style.cssText = "text-align:left;padding-left:0.1rem;";
 
-}else{
-                 var jsonobjs = JSON.parse(str);
-
-                    var table = document.getElementById("mytesttable");
-                    for(var y=0; y<jsonobjs.length; y++){
-                        var tr = table.insertRow(table.rows.length);
-                        var td1 = tr.insertCell(0);
-                        var td2 = tr.insertCell(1);
-                        var td3 = tr.insertCell(2);
-                        var td4 = tr.insertCell(3);
-                        var td5 = tr.insertCell(4);
-  var td6 = tr.insertCell(5);
-
-td1.align = "center";
-td2.align = "center";
-td3.align = "center";
-td4.align = "center";
-td5.align = "left";
-td5.style.cssText = "text-align:left;padding-left:0.1rem;";
-
-
-
-                        td1.innerHTML = jsonobjs[y].code;
-                        td2.innerHTML = jsonobjs[y].name;
-                          td3.innerHTML = jsonobjs[y].date;
-                          td4.innerHTML = jsonobjs[y].shape;
-                          td5.innerHTML = jsonobjs[y].remark;
-
-                        td6.innerHTML = "<a href='javascript:window.SM.delete(\""+ jsonobjs[y].code+ "\")'>删除</a>";
-                    }
-            }
-
+            td1.innerHTML = jsonobjs[y].code;
+            td2.innerHTML = jsonobjs[y].name;
+            td3.innerHTML = jsonobjs[y].date;
+            td4.innerHTML = jsonobjs[y].shape;
+            td5.innerHTML = jsonobjs[y].remark;
+            td6.innerHTML = "<a href='javascript:window.SM.delete(\""+ jsonobjs[y].code+ "\")'>删除</a>";
+      }
+  }
 
 }
 

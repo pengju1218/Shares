@@ -9,7 +9,7 @@ function sAlert(strTitle, strContent) {
 	msgw = 400; //提示窗口的宽度
 	msgh = 100; //提示窗口的高度
 	titleheight = 25 //提示窗口标题高度
-		bordercolor = "#336699"; //提示窗口的边框颜色
+	bordercolor = "#336699"; //提示窗口的边框颜色
 	titlecolor = "#99CCFF"; //提示窗口的标题颜色
 	var sWidth,
 	sHeight;
@@ -82,17 +82,17 @@ function showTips(strTitle, strContent) {
 	var diaTip = document.createElement('div');
 
 	diaTip.id = "tipBox";
+	window.setTimeout(function () {
+    diaTip.style.visibility="hidden";
+    	}, 3000);
 	diaTip.innerHTML = "<div style='background-color: dodgerblue;  color: white; width:2rem;  height: 0.1rem;  line-height: 0.1rem;  padding:5px;  text-align: left;  vertical-align: middle;   border-top-right-radius: 5px;   border-top-left-radius: 5px;  position: relative; ' id='title'>" + strTitle + "</div>  <div  style='color: green;  padding: 5px;  background-color: #dedede;  text-align: center;   height:0.4rem; ' class='inner'>" + strContent + "</div> "
 	diaTip.style.position = "absolute";
 	diaTip.style.left = "20%";
-	diaTip.style.top = "50%";
+	diaTip.style.top = "30%";
 	diaTip.cssText = " width: 3rem;  height: 1.5rem; box-sizing: inherit;  position: absolute;  display: none;  z-index:1000;  ";
 	document.body.appendChild(diaTip);
+    diaTip.style.visibility="visible";
 
-	setTimeout(function () {
-		document.body.removeChild(diaTip);
-
-	}, 3000);
 
 }
 
@@ -103,6 +103,7 @@ function Tip() {
 
 	this.showTip = function (strTitle, strContent) {
 		showTips(strTitle, strContent)
+
 	};
 }
 var tip = new Tip();
