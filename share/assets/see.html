@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/frozen.css">
     <link rel="stylesheet" href="css/demo.css">
     <script src="js/zepto.min.js"></script>
-    <script type="text/javascript" src="js/msg.js" ></script>
+    <script type="text/javascript" src="js/tip.js"></script>
     <script src="js/frozen.js"></script>
 </head>
 
@@ -68,8 +68,8 @@
  function callJs(str){
 
 if(str==''){
-msg.tips("没有数据");
 
+tip.showTip('提示','没有数据');
 
 }else{
                  var jsonobjs = JSON.parse(str);
