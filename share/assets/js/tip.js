@@ -83,8 +83,8 @@ function showTips(strTitle, strContent) {
 
 	diaTip.id = "tipBox";
 	window.setTimeout(function () {
-    diaTip.style.visibility="hidden";
-    	}, 3000);
+    diaTip.style.display="none";
+    	}, 1000);
 	diaTip.innerHTML = "<div style='background-color: dodgerblue;  color: white; width:2rem;  height: 0.1rem;  line-height: 0.1rem;  padding:5px;  text-align: left;  vertical-align: middle;   border-top-right-radius: 5px;   border-top-left-radius: 5px;  position: relative; ' id='title'>" + strTitle + "</div>  <div  style='color: green;  padding: 5px;  background-color: #dedede;  text-align: center;   height:0.4rem; ' class='inner'>" + strContent + "</div> "
 	diaTip.style.position = "absolute";
 	diaTip.style.left = "20%";
@@ -95,8 +95,84 @@ function showTips(strTitle, strContent) {
 
 
 }
+//自动关闭提示框
+function Alert(str) {
+    var msgw,msgh,bordercolor;
+    msgw=2;//提示窗口的宽度
+    msgh=0.6;//提示窗口的高度
+    titleheight=15 //提示窗口标题高度
+    bordercolor="#336699";//提示窗口的边框颜色
+    titlecolor="#99CCFF";//提示窗口的标题颜色
+    var sWidth,sHeight;
+    //获取当前窗口尺寸
+    sWidth = document.body.offsetWidth;
+    sHeight = document.body.offsetHeight;
+
+    //创建提示窗口的div
+    var msgObj = document.createElement("div")
+    msgObj.setAttribute("id","alertmsgDiv");
+    msgObj.setAttribute("align","center");
+    msgObj.style.background="white";
+    msgObj.style.border="1px solid " + bordercolor;
+    msgObj.style.position = "absolute";
+    msgObj.style.left = "20%";
+    msgObj.style.font="0.15rem Verdana, Geneva, Arial, Helvetica, sans-serif";
+    //窗口距离左侧和顶端的距离
+
+    //窗口被卷去的高+（屏幕可用工作区高/2）-150
+    msgObj.style.top = "20%";
+    msgObj.style.width = msgw + "rem";
+    msgObj.style.height = msgh + "rem";
+    msgObj.style.textAlign = "center";
+
+    document.body.appendChild(msgObj);
+    //提示信息标题
+    var title=document.createElement("h4");
+    title.setAttribute("id","alertmsgTitle");
+    title.setAttribute("align","left");
+    title.style.margin="0";
+    title.style.padding="3px";
+    title.style.background = bordercolor;
+      title.style.opacity="0.75";
+    title.style.border="1px solid " + bordercolor;
+    title.style.height="0.13rem";
+    title.style.font="0.04rem Verdana, Geneva, Arial, Helvetica, sans-serif";
+    title.style.color="white";
+    title.innerHTML="提示信息";
+    document.getElementById("alertmsgDiv").appendChild(title);
+    //提示信息
+    var txt = document.createElement("p");
+    txt.setAttribute("id","msgTxt");
+    txt.style.margin="6px 0";
+    txt.innerHTML = str;
+    document.getElementById("alertmsgDiv").appendChild(txt);
+   document.getElementById("alertmsgDiv").style.display = 'none';
+}
+
+
+function showAlert(strContent){
+
+document.getElementById("msgTxt").innerHTML=strContent;
+document.getElementById("alertmsgDiv").style.display = 'block';
+   window.setTimeout("closewin()",3000);
+
+}
+
+
+
+function closewin() {
+document.getElementById("alertmsgDiv").style.display = 'none';
+  // document.body.removeChild(document.getElementById("alertmsgDiv"));
+
+}
+
+
+
+
+
 
 function Tip() {
+
 	this.show = function (strTitle, strContent) {
 		sAlert(strTitle, strContent)
 	};
@@ -105,5 +181,14 @@ function Tip() {
 		showTips(strTitle, strContent)
 
 	};
+
+    this.alert = function (strContent) {
+
+       showAlert(strContent);
+   //设置关闭时间
+
+    };
+
 }
+Alert('');
 var tip = new Tip();

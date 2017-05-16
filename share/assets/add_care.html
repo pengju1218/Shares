@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/frozen.css">
     <link rel="stylesheet" href="css/demo.css">
 
-    <script type="text/javascript" src="js/tip.js"></script>
+
     <script src="js/zepto.min.js"></script>
     <script src="js/frozen.js"></script>
     <style>
@@ -89,6 +89,7 @@
 
 
 </section><!-- /.ui-container-->
+<script type="text/javascript" src="js/tip.js"></script>
 <script>
         $('.ui-list li,.ui-tiled li').click(function(){
             if($(this).data('href')){
@@ -113,7 +114,9 @@
 
         var str = JSON.stringify(jsObj);
        if(jsObj.code.length==0||jsObj.name.length==0||jsObj.remark.length==0){
-          tip.showTip('提示','表单不能为空');
+          tip.alert('表单不能为空');
+
+
         }else{
            window.SM.UpdateCare(str);
         }
