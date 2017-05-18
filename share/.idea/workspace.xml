@@ -45,10 +45,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="add.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
+            <state relative-caret-position="768">
               <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
               <folding>
                 <element signature="e#5272#5300#0" expanded="true" />
@@ -59,10 +59,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="store.jks" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/store.jks">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="add_care.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/add_care.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171">
+            <state relative-caret-position="2223">
               <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="65" />
               <folding>
                 <element signature="e#5415#5445#0" expanded="true" />
@@ -84,7 +94,7 @@
       <file leaf-file-name="demo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/luck/demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="494">
               <caret line="26" column="7" selection-start-line="22" selection-start-column="4" selection-end-line="26" selection-end-column="7" />
               <folding />
             </state>
@@ -94,28 +104,18 @@
       <file leaf-file-name="follow.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/follow.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1349">
-              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="25" />
+            <state relative-caret-position="551">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tip.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tip.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/tip.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="156" column="40" selection-start-line="156" selection-start-column="40" selection-end-line="156" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="378">
+              <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -124,8 +124,8 @@
       <file leaf-file-name="see.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/see.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1178">
-              <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+            <state relative-caret-position="247">
+              <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -134,7 +134,7 @@
       <file leaf-file-name="msg.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/msg.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
+            <state relative-caret-position="6308">
               <caret line="332" column="35" selection-start-line="332" selection-start-column="20" selection-end-line="332" selection-end-column="35" />
               <folding />
             </state>
@@ -144,7 +144,7 @@
       <file leaf-file-name="toast.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/toast.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
+            <state relative-caret-position="475">
               <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
               <folding />
             </state>
@@ -1192,11 +1192,11 @@
         <option value="$PROJECT_DIR$/src/com/csdn/share/util/dao/CareDao.java" />
         <option value="$PROJECT_DIR$/src/com/csdn/share/PhoneGapActivity.java" />
         <option value="$PROJECT_DIR$/assets/index.html" />
-        <option value="$PROJECT_DIR$/assets/follow.html" />
-        <option value="$PROJECT_DIR$/assets/see.html" />
         <option value="$PROJECT_DIR$/assets/js/tip.js" />
         <option value="$PROJECT_DIR$/assets/add_care.html" />
         <option value="$PROJECT_DIR$/assets/add.html" />
+        <option value="$PROJECT_DIR$/assets/see.html" />
+        <option value="$PROJECT_DIR$/assets/follow.html" />
       </list>
     </option>
   </component>
@@ -1231,6 +1231,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane />
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1408,12 +1414,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView">
-        <subPane />
       </pane>
     </panes>
   </component>
@@ -2105,7 +2105,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_relative_layout_test.xml" />
     <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/add_share.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2162,14 +2161,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/intermediates/res/merged/release/values-v23/values-v23.xml" />
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/intermediates/res/merged/release/values-v24/values-v24.xml" />
@@ -2264,7 +2263,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27854">
           <caret line="1523" column="15" selection-start-line="1523" selection-start-column="15" selection-end-line="1523" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2272,7 +2270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2295,40 +2292,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/jbox/js/jquery-1.4.2.min.js" />
     <entry file="file://$PROJECT_DIR$/assets/jbox/index.html" />
-    <entry file="file://$PROJECT_DIR$/assets/follow.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1349">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/see.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/layer/images/dir.txt" />
     <entry file="file://$PROJECT_DIR$/assets/layer/demo.html" />
-    <entry file="file://$PROJECT_DIR$/assets/js/tip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="156" column="40" selection-start-line="156" selection-start-column="40" selection-end-line="156" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/mbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/mbox.js" />
     <entry file="file://$PROJECT_DIR$/assets/luck/luck/luck.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2339,7 +2305,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/luck/demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="494">
           <caret line="26" column="7" selection-start-line="22" selection-start-column="4" selection-end-line="26" selection-end-column="7" />
           <folding />
         </state>
@@ -2347,7 +2313,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/msg.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
+        <state relative-caret-position="6308">
           <caret line="332" column="35" selection-start-line="332" selection-start-column="20" selection-end-line="332" selection-end-column="35" />
           <folding />
         </state>
@@ -2355,7 +2321,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/toast.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
+        <state relative-caret-position="475">
           <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
           <folding />
         </state>
@@ -2363,7 +2329,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/add_care.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
+        <state relative-caret-position="2223">
           <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="65" />
           <folding>
             <element signature="e#5415#5445#0" expanded="true" />
@@ -2373,13 +2339,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
+        <state relative-caret-position="768">
           <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding>
             <element signature="e#5272#5300#0" expanded="true" />
             <element signature="e#5864#5894#0" expanded="true" />
             <element signature="e#6008#6027#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/store.jks">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/see.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/follow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/tip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
