@@ -1,0 +1,106 @@
+<!--
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>FrozenUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="css/tab.css"/>
+	<script type="text/javascript" src="../js/stats.js" charset="UTF-8"></script>
+	<link rel="stylesheet" href="../css/frozen.css">
+	<link rel="stylesheet" href="../css/demo.css">
+	<script src="../js/zepto.min.js"></script>
+
+	<script src="../js/frozen.js"></script>
+</head>
+
+<body ontouchstart onload="add()"style="width:8rem;">
+<header class="ui-header ui-header-positive ui-border-b">
+	<i class="ui-icon-return" onclick="history.back()"></i>
+	<h1>我的总结</h1>
+</header>
+
+<script type="text/javascript"  src="js/tab.js"></script>
+<section class="ui-container">
+
+
+
+</section>
+
+
+<script>
+	function add(){
+
+	  var str=['要点1','要点2','要点3','要点4','要点5'];
+	  var arrayHtml=['one.htm','two.htm','three.htm','four.htm','five.htm']
+
+	  tab.show(str,arrayHtml,'ui-container');
+
+	}
+
+	 $('.ui-header .ui-btn').click(function(){
+            location.href= 'index.html';
+        });
+
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<title>适合移动网页纯原生js选项卡tab切换</title>
+	<link rel="stylesheet" href="../css/frozen.css">
+	<link rel="stylesheet" href="../css/demo.css">
+	<link rel="stylesheet" type="text/css" href="css/tab.css"/>
+
+<body onload="add()">
+<header class="ui-header ui-header-positive ui-border-b">
+	<i class="ui-icon-return" onclick="history.back()"></i>
+	<h1>我的总结</h1>
+</header>
+<section class="ui-container">
+
+
+
+</section>
+
+<script>
+	function add(){
+
+	  var str=['警醒','体会','财富'];
+	  var arrayHtml=['one.htm','two.htm','three.htm'];//'three.htm','four.htm','five.htm'
+
+	  tab.show(str,arrayHtml);
+
+	}
+
+	</script>
+
+
+</body>
+
+<script type="text/javascript"  src="js/tab.js"></script>
+</html>

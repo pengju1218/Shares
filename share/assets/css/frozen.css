@@ -464,6 +464,12 @@ h6, .ui-txt-tips {
         border-radius: 8px;
         pointer-events: none; } }
 
+@font-face {
+    /* font-properties */
+    font-family: kaiti;
+    src: url('../tab/font/kaiti.ttf')
+
+}
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
   .ui-border {
     position: relative;
@@ -551,6 +557,8 @@ h6, .ui-txt-tips {
   max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
+font-family:kaiti;
+
   text-overflow: ellipsis; }
 
 .ui-nowrap-flex {
