@@ -1,0 +1,165 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类似手机天猫滑动页签</title>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+    <!--<link href="css/pages.css" rel="stylesheet"/>
+    <link href="css/tabs.css" rel="stylesheet"/>-->
+
+    <style type="text/css">
+        #content{
+            width: 100%;
+            overflow: hidden;
+        }
+        /*.content >div{
+
+            display: none;
+        }*/
+        .scroller{
+            display: -webkit-box;
+        }
+        .scroller >div{
+            width: 100%;
+        }
+        .container img{
+            width: 100%;
+        }
+        /*.scroller .selected{
+            display: block;
+        }*/
+
+
+        .box{
+            border: 0px solid #A9C9E2;
+            background-color: #18B4ED;
+            height: 0.8rem;
+
+            line-height:0.8rem;
+            vertical-align:middle;
+            font-size:0.4rem;
+            text-align:center;
+            color:white;
+            overflow:hidden;
+            width:100%
+     }
+
+     .return{
+            float:left;
+            margin-top:0.12rem;
+
+            margin-left:0.1rem;
+	}
+
+
+     .return img{
+            width:0.32rem;
+            height:0.55rem;
+     }
+    </style>
+
+
+
+
+</head>
+<body >
+
+<header>
+	<div class="box">
+        <a href="../index.html" class="return"><img src="img/return.png"></a>
+        我的学习
+    </div>
+</header>
+
+
+
+    <div id="wrapper" class="wrapper">
+        <div id="content" class="content">
+            <div id="scroller" class="scroller">
+                <div class="tab current">
+                    <div class="container">
+                        <img src="img/test.jpg"/>
+                    </div>
+                </div>
+                <div class="tab" >
+                    <div class="container">
+                        <img src="img/test.jpg"/>
+                    </div>
+                </div>
+                <div class="tab" >
+                    <div class="container">
+                        <img src="img/test.jpg"/>
+                    </div>
+                </div>
+                <div class="tab" >
+                    <div class="container">
+                        <img src="img/test.jpg"/>
+                    </div>
+                </div>
+                <div class="tab" >
+                    <div class="container">
+                        <img src="img/test.jpg"/>
+                    </div>
+                </div>
+
+				 <div class="tab" >
+                    <div class="container">
+                        <img src="img/test.jpg"/>
+                    </div>
+                </div>
+
+				 <div class="tab" >
+                    <div class="container">
+                        <img src="img/test.jpg"/>
+                    </div>
+                </div>
+
+				 <div class="tab" >
+                    <div class="container">
+                        <img src="img/test.jpg"/>
+                    </div>
+                </div>
+				 <div class="tab" >
+                    <div class="container">
+                        <img src="img/test.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/ScrollTabs.js"></script>
+    <script>
+        new ScrollTabs({
+            'container': 'wrapper',
+            'panel': 'scroller',
+            'current': 0,
+            'data': [{
+                'name': '第一章',
+            },{
+                'name': '第二章',
+            },{
+                'name': '第三章',
+            },{
+                'name': '第四章',
+            },{
+                'name': '第五章',
+            },{
+                'name': '第六章',
+            },{
+                'name': '第七章',
+            },{
+                'name': '第八章',
+            },{
+                'name': '第九章',
+            }],
+            'change': function(index) {
+                document.body.scrollTop = 0;
+                console.log(document.querySelectorAll('.container')[index].offsetHeight);
+            }
+        });
+    </script>
+</body>
+</html>
